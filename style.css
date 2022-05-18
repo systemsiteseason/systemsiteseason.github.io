@@ -1,0 +1,91 @@
+﻿@font-face {
+    font-family: 'Dongle';
+    src: url('Dongle-Regular.woff2') format('woff2'),
+    url('Dongle-Regular.otf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    font-family: 'Dongle';
+}
+
+@keyframes flicker{
+    50%{
+        opacity:0
+    }
+
+    80%{
+        opacity:.5
+    }
+}
+
+body
+{
+    background-color:black;
+    width:auto;
+    height:auto; 
+}
+
+h1
+{
+    color:white;
+    font-size:50px;
+    display:inline;
+}
+
+h2 {
+    color: white;
+    font-size: 50px;
+    animation: flicker 1s linear infinite;
+    display:inline;
+}
+
+.main
+{
+    width:80%;
+    margin:auto;
+}
+
+.nav .navigation ul{
+    display:flex;
+    flex-direction:row;
+}
+
+.nav .navigation ul li {
+    list-style:none;
+    padding:0 1rem;
+}
+
+.nav .navigation ul li a {
+    text-decoration: none;
+    font-size:34px;
+    letter-spacing:1px;
+    font-weight:500;
+    color: #bdbdbd;
+    transition:0.3s ease;
+}
+
+.nav .navigation ul li a:hover {
+    color:#ffffff;
+}
+
+.nav .navigation ul li a span {
+    background-color: #5865f2;
+    font-size:34px;
+    font-weight:400;
+    color:white;
+    padding:0px 15px;
+    border-radius:10px;
+    letter-spacing:0.25px;
+}
+
+.nav{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    padding:1.5rem 7rem;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.15);
+}
